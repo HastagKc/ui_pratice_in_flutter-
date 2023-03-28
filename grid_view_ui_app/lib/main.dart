@@ -31,8 +31,11 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Container(
+          margin: const EdgeInsets.all(10),
           // child: courseLayout(context),
-          child: masonaryLayout(context),
+          // child: masonaryLayout(context),
+          child: alignedLayout(context),
+          // child: quiltedLayout(context),
         ),
       ),
     );
@@ -41,16 +44,19 @@ class _MyAppState extends State<MyApp> {
 //masonryGridView.builder
   Widget masonaryLayout(BuildContext context) {
     return MasonryGridView.builder(
-        // scrollDirection: Axis.horizontal,
-        gridDelegate:
-            SliverSimpleGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-        itemCount: imageList.length,
-        itemBuilder: (context, index) {
-          return ClipRRect(
-            borderRadius: BorderRadius.circular(12),
-            child: Image.asset('assets/image/${imageList[index]}'),
-          );
-        });
+      // scrollDirection: Axis.horizontal,
+      crossAxisSpacing: 21,
+      mainAxisSpacing: 30,
+      gridDelegate: const SliverSimpleGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2),
+      itemCount: imageList.length,
+      itemBuilder: (context, index) {
+        return ClipRRect(
+          borderRadius: BorderRadius.circular(12),
+          child: Image.asset('assets/image/${imageList[index]}'),
+        );
+      },
+    );
   }
 
 // masonryGridView.count
@@ -64,6 +70,54 @@ class _MyAppState extends State<MyApp> {
   //         child: Image.asset('assets/image/${imageList[index]}'),
   //       );
   //     },
+  //   );
+  // }
+
+// aligned layout
+  Widget alignedLayout(BuildContext context) {
+    return AlignedGridView.count(
+      // scrollDirection: Axis.horizontal,
+      crossAxisSpacing: 21,
+      mainAxisSpacing: 30,
+      crossAxisCount: 2,
+      itemCount: imageList.length,
+      itemBuilder: (context, index) {
+        return ClipRRect(
+          borderRadius: BorderRadius.circular(12),
+          child: Image.asset(
+            'assets/image/${imageList[index]}',
+            fit: BoxFit.cover,
+          ),
+        );
+      },
+    );
+  }
+
+  // Widget quiltedLayout(BuildContext context) {
+  //   return GridView.custom(
+  //     gridDelegate: SliverQuiltedGridDelegate(
+  //       crossAxisCount: 2,
+  //       /*   mainAxisSpacing: 4,
+  //       crossAxisSpacing: 4, */
+  //       // repeatPattern: QuiltedGridRepeatPattern.inverted,
+  //       pattern: [
+  //         QuiltedGridTile(1, 0),
+  //         QuiltedGridTile(0, 1),
+  //         QuiltedGridTile(0, 1),
+  //         QuiltedGridTile(0, 1),
+  //         QuiltedGridTile(0, 1),
+  //         QuiltedGridTile(0, 1),
+  //         QuiltedGridTile(0, 1),
+  //       ],
+  //     ),
+  //     childrenDelegate: SliverChildBuilderDelegate(
+  //       (context, index) {
+  //         return ClipRRect(
+  //           borderRadius: BorderRadius.circular(12),
+  //           child: Image.asset('assets/image/${imageList[index]}'),
+  //         );
+  //       },
+  //     ),
   //   );
   // }
 }
