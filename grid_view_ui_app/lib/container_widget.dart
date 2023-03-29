@@ -1,10 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:grid_view_ui_app/imageList.dart';
 
 class ContainerWidgets extends StatelessWidget {
   const ContainerWidgets({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var image = ImageList();
+    /* List<String> listOfImage = [
+      'c++.png',
+      'css.png',
+      'dart.png',
+      'go.png',
+      'html.png',
+      'java.png',
+      'js.png',
+      'kotlin.png',
+      'python.png',
+    ]; */
+    // print(image.listOfImage[0]);
     return Center(
       child: Container(
         /*   width: 200,
@@ -20,8 +34,9 @@ class ContainerWidgets extends StatelessWidget {
         /*    margin: const EdgeInsets.all(10),
         padding: const EdgeInsets.all(20), */
 
-        foregroundDecoration: const BoxDecoration(
-          color: Colors.green,
+//? foregroundDecoration will in front of the container
+        /*    foregroundDecoration: const BoxDecoration(
+          // color: Colors.green,
           shape: BoxShape.circle,
           boxShadow: [
             BoxShadow(
@@ -32,10 +47,10 @@ class ContainerWidgets extends StatelessWidget {
               blurStyle: BlurStyle.normal,
             ),
           ],
-        ),
-        /*  decoration: BoxDecoration(
+        ), */
+        decoration: BoxDecoration(
           color: Colors.blue,
-          borderRadius: BorderRadius.circular(10),
+          // borderRadius: BorderRadius.circular(10),
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.3),
@@ -45,15 +60,12 @@ class ContainerWidgets extends StatelessWidget {
               offset: const Offset(3, 2),
             ),
           ],
-        ), */
-        /*   child: const Text(
-          'This is container ',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-          ),
-        ), */
+          shape: BoxShape.circle,
+        ),
+        child: Image.asset(
+          'assets/image/${image.listOfImage[0]}',
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }
