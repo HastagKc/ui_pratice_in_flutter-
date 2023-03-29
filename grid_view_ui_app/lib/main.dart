@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:grid_view_ui_app/columnRow.dart';
+import 'package:grid_view_ui_app/container_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,13 +32,17 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Container(
+        body: ContainerWidgets(),
+        /*    body: Container(
           margin: const EdgeInsets.all(10),
           // child: courseLayout(context),
           // child: masonaryLayout(context),
-          child: alignedLayout(context),
+          // child: alignedLayout(context),
           // child: quiltedLayout(context),
-        ),
+
+          // child: const RowColumn(),
+          child: const ContainerWidgets(),
+        ), */
       ),
     );
   }
@@ -77,16 +83,19 @@ class _MyAppState extends State<MyApp> {
   Widget alignedLayout(BuildContext context) {
     return AlignedGridView.count(
       // scrollDirection: Axis.horizontal,
-      crossAxisSpacing: 21,
-      mainAxisSpacing: 30,
+      /*   crossAxisSpacing: 21,
+      mainAxisSpacing: 30, */
       crossAxisCount: 2,
       itemCount: imageList.length,
       itemBuilder: (context, index) {
         return ClipRRect(
           borderRadius: BorderRadius.circular(12),
-          child: Image.asset(
-            'assets/image/${imageList[index]}',
-            fit: BoxFit.cover,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Image.asset(
+              'assets/image/${imageList[index]}',
+              fit: BoxFit.contain,
+            ),
           ),
         );
       },
