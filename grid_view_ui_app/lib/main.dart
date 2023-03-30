@@ -3,6 +3,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:grid_view_ui_app/columnRow.dart';
 import 'package:grid_view_ui_app/constraint_box.dart';
 import 'package:grid_view_ui_app/container_widget.dart';
+import 'package:grid_view_ui_app/media_query.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,11 +31,12 @@ class _MyAppState extends State<MyApp> {
   ];
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         // body: ContainerWidgets(),
-        body: ConstraintBoxWidgets(),
+        // body: ConstraintBoxWidgets(),
+        body: MediaQueryPr(),
         /*    body: Container(
           margin: const EdgeInsets.all(10),
           // child: courseLayout(context),
