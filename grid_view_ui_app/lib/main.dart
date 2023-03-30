@@ -4,6 +4,7 @@ import 'package:grid_view_ui_app/columnRow.dart';
 import 'package:grid_view_ui_app/constraint_box.dart';
 import 'package:grid_view_ui_app/container_widget.dart';
 import 'package:grid_view_ui_app/media_query.dart';
+import 'package:grid_view_ui_app/media_query2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,7 +37,8 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         // body: ContainerWidgets(),
         // body: ConstraintBoxWidgets(),
-        body: MediaQueryPr(),
+        // body: MediaQueryPr(),
+        body: MyHomePage(),
         /*    body: Container(
           margin: const EdgeInsets.all(10),
           // child: courseLayout(context),
