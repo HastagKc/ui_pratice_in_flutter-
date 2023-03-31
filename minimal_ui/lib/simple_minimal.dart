@@ -6,6 +6,7 @@ class SimpleMinimalDesign extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // single Child ScrollView is added
       body: SingleChildScrollView(
         child: Container(
           width: MediaQuery.of(context).size.width,
