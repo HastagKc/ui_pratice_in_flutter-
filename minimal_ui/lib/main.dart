@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:minimal_ui/pratice_ui.dart';
 import 'package:minimal_ui/simple_minimal.dart';
 
 void main() {
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.amber,
       ),
-      home: const SimpleMinimalDesign(),
+      // home: const SimpleMinimalDesign(),
+      home: const PraticeUi(),
     );
   }
 }
