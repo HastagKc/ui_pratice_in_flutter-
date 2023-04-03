@@ -1,33 +1,33 @@
 import 'package:flutter/material.dart';
 
-class PraticeUi extends StatelessWidget {
-  const PraticeUi({super.key});
+class PraticeAgain extends StatelessWidget {
+  const PraticeAgain({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        padding: const EdgeInsets.only(
+          left: 20.0,
+          right: 20.0,
+        ),
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            begin: Alignment.topCenter,
+            begin: Alignment.topLeft,
             end: Alignment.bottomCenter,
             colors: [
-              Color.fromARGB(255, 236, 215, 22),
-              Color.fromARGB(255, 134, 122, 8),
+              Color.fromRGBO(255, 235, 59, 1),
+              Color.fromRGBO(255, 155, 49, 1),
             ],
           ),
-        ),
-        padding: const EdgeInsets.only(
-          left: 15.0,
-          right: 15.0,
         ),
         child: SingleChildScrollView(
           child: Column(
             children: [
               const SizedBox(
-                height: 35.5,
+                height: 25.0,
               ),
               Align(
                 alignment: Alignment.topRight,
@@ -35,45 +35,51 @@ class PraticeUi extends StatelessWidget {
                   onPressed: () {},
                   icon: const Icon(
                     Icons.close,
-                    color: Colors.white,
-                    size: 35.0,
-                  ),
-                ),
-              ),
-              const Text(
-                "Check Vechile Availability",
-                style: TextStyle(
-                  fontSize: 55.0,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(
-                height: 15.0,
-              ),
-              const TextField(
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  hintText: 'Enter your Zip code',
-                  hintStyle: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20.0,
-                  ),
-                  prefixIcon: Icon(
-                    Icons.arrow_forward,
+                    size: 25.0,
                     color: Colors.white,
                   ),
-                  border: InputBorder.none,
                 ),
               ),
               const SizedBox(
                 height: 25.0,
               ),
               const Text(
-                "We want to ensure the vechicle are aviable in your location",
+                'Check Vechile Availablility',
                 style: TextStyle(
-                  fontSize: 25.0,
+                  fontSize: 35.0,
                   color: Colors.white,
+                ),
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              const TextField(
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  /*  label: Text(
+                    'Enter your Zip code',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16.0,
+                    ),
+                  ), */
+                  hintText: 'Enter your code',
+                  hintStyle: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20.0,
+                  ),
+                  border: InputBorder.none,
+                  focusColor: Colors.black,
+                ),
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              const Text(
+                'We want to ensure the vechile in your area for delivery',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24.0,
                 ),
               ),
               const SizedBox(
@@ -81,38 +87,38 @@ class PraticeUi extends StatelessWidget {
               ),
               Image.asset('assets/image/car.png'),
               const SizedBox(
-                height: 15.0,
+                height: 45.0,
               ),
               Container(
                 color: Colors.white,
-                height: 1.75,
+                height: 1.5,
               ),
               const SizedBox(
-                height: 35.0,
+                height: 25.0,
               ),
               const Text(
-                "Been Here Before ? Already have been eleanor account",
+                'Been here before ? Already have been enroll account',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 22.0,
                 ),
               ),
               const SizedBox(
-                height: 35.0,
+                height: 55.0,
               ),
               Row(
                 children: const [
                   Text(
-                    "Sign In ",
+                    'Sign In ',
                     style: TextStyle(
-                      fontSize: 24.0,
+                      fontSize: 22.0,
                       color: Colors.white,
                     ),
                   ),
                   Icon(
                     Icons.arrow_forward,
                     color: Colors.white,
-                    size: 25.0,
+                    size: 22.0,
                   ),
                 ],
               ),

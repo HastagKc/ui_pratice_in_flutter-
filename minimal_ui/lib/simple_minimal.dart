@@ -66,43 +66,43 @@ class SimpleMinimalDesign extends StatelessWidget {
                 ),
                 keyboardType: TextInputType.number,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15.0,
               ),
-              Text(
+              const Text(
                 "We want to ensure the vehicle is aviable in your area for delivery",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 85.0,
               ),
               Image.asset(
                 'assets/image/car.png',
                 fit: BoxFit.cover,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20.0,
               ),
               Container(
                 color: Colors.white,
                 height: 0.75,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15.0,
               ),
-              Text(
+              const Text(
                 "Been here before ? Already have been eleanor account",
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15.0,
               ),
               Row(
                 children: [
-                  Text(
+                  const Text(
                     "Sign In",
                     style: TextStyle(
                       fontSize: 24,
@@ -114,12 +114,12 @@ class SimpleMinimalDesign extends StatelessWidget {
                   ),
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.arrow_forward,
                       color: Colors.white,
                       size: 20,
                     ),
-                  )
+                  ),
                 ],
               ),
             ],
