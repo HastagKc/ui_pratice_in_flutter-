@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:listviewdetails/model/fruit_data.dart';
+import 'package:listviewdetails/view/details_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -29,6 +30,15 @@ class HomePage extends StatelessWidget {
                   ),
                   title: Text(fruits[index].name),
                   subtitle: Text(' \$ ${fruits[index].price}'),
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => DetalisPage(
+                          fruitDataDetails: fruits[index],
+                        ),
+                      ),
+                    );
+                  },
                 ),
               );
             },
