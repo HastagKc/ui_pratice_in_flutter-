@@ -22,11 +22,17 @@ class HomePage extends StatelessWidget {
                 elevation: 5.0,
                 child: ListTile(
                   leading: CircleAvatar(
-                    child: Image(
+                    maxRadius: 25.0,
+                    backgroundImage: NetworkImage(
+                      fruits[index].imgUrl,
+                    ),
+
+                    /*     child: Image(
                       image: NetworkImage(
                         fruits[index].imgUrl,
                       ),
                     ),
+                   */
                   ),
                   title: Text(fruits[index].name),
                   subtitle: Text(' \$ ${fruits[index].price}'),

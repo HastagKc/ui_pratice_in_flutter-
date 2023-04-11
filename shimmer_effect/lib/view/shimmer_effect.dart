@@ -37,7 +37,7 @@ class _ShimmerEffectPageState extends State<ShimmerEffectPage> {
             Center(
               child: isDataFetch == false
                   ? shimmerEffectWidgets()
-                  : Center(
+                  : const Center(
                       child: Text(
                         'Content is here',
                         style: TextStyle(
@@ -54,7 +54,7 @@ class _ShimmerEffectPageState extends State<ShimmerEffectPage> {
 
   Widget shimmerEffectWidgets() {
     return Shimmer.fromColors(
-      baseColor: Color.fromARGB(255, 212, 209, 209),
+      baseColor: const Color.fromARGB(255, 212, 209, 209),
       highlightColor: Colors.white,
       // loop: 1,
 
