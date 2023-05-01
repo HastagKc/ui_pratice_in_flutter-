@@ -1,3 +1,4 @@
 {
-  "cmake.sourceDirectory": "E:/flutter ui pratice/firebase_curd/windows/flutter"
+  "cmake.sourceDirectory": "E:/flutter ui pratice/firebase_curd/windows/flutter",
+  "java.configuration.updateBuildConfiguration": "disabled"
 }
