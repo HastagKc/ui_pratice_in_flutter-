@@ -1,8 +1,12 @@
+import 'package:counter_app/providers/counter_provider.dart';
+import 'package:counter_app/providers/name_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../providers/counter_provider.dart';
-
+// string provider
+final nameProvider =
+    StateNotifierProvider<NameProvider, String>((ref) => NameProvider());
+//! creating an instance of CounterProvider
 final counterProvider =
     StateNotifierProvider<CounterProvider, int>((ref) => CounterProvider());
 
@@ -12,8 +16,10 @@ class HomePage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     final counter = ref.watch(counterProvider);
-
     return Scaffold(
+      appBar: AppBar(
+        title: Text(ref.watch(nameProvider)),
+      ),
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
@@ -34,20 +40,18 @@ class HomePage extends ConsumerWidget {
           ),
         ],
       ),
-      body: SafeArea(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                '${counter}',
-                style: const TextStyle(
-                  fontSize: 45.0,
-                ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          // crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              '$counter',
+              style: const TextStyle(
+                fontSize: 45.0,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
